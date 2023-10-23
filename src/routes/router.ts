@@ -1,5 +1,5 @@
 import Profiles from "../pages/Profiles/Profiles.vue";
-import Welcome from "../pages/Welcome/Welcome.vue";
+import Welcome from "@/pages/Welcome/Welcome.vue";
 import * as VueRouter from "vue-router";
 
 import { ROUTER, NAME_ROUTER } from "./constant-router";
