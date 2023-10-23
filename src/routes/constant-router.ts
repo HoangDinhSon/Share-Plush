@@ -3,5 +3,10 @@ const ROUTER = {
   profile: "/profile",
   login: "/login",
 };
+const NAME_ROUTER = {
+  welcome: "welcome",
+  profile: "profile",
+  login: "login",
+};
 
-export { ROUTER };
+export { ROUTER, NAME_ROUTER };
