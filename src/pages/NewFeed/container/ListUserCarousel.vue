@@ -20,10 +20,8 @@ const responsiveOptions = ref([
   },
 ]);
 </script>
-color: var(--greyscale-800, #202B3C); font-family: Be Vietnam Pro; font-size:
-12px; font-style: normal; font-weight: 500; line-height: 150%;
 <template>
-  <div class="card-main">
+  <div class="card-main mb-2">
     <div class="flex justify-between mb-3">
       <p class="text-header-main">Explore SHAREPLUS Idols:</p>
       <Button

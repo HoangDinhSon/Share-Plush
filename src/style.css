@@ -8,6 +8,7 @@
     --color-text-white: #ffffff;
     /* Background */
     --color-bg-main: #485bc9;
+    --color-bg-secondary: #e2e8f0;
     /* Border */
     --color-border-main: #ffffff;
     --color-border-secondary: #ffffff;
@@ -22,13 +23,19 @@
 @tailwind components;
 @layer components {
   .card-main {
-    @apply px-4 py-3;
+    @apply px-4 py-3 bg-white;
   }
   .text-name-main {
     @apply text-[13px] font-semibold  leading-snug;
   }
   .text-header-main {
     @apply text-xs font-medium leading-normal;
+  }
+  .text-sub-header-main {
+    @apply text-[11px] font-normal leading-normal;
+  }
+  .bg-main {
+    @apply  bg-[var(--color-bg-secondary)]
   }
 }
 @tailwind utilities;

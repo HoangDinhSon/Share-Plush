@@ -6,7 +6,7 @@ const classButton = "bg-[#E2E8F0] h-[22px] px-[2px]  border-none rounded-lg";
 
 </script>
 <template>
-  <div class="w-full flex justify-between card-main mb-4">
+  <div class="w-full flex justify-between card-main mb-2">
     <SharePlusSmallLogoIcon />
     <div class="flex gap-2">
       <Button
