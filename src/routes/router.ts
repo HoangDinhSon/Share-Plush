@@ -1,4 +1,4 @@
-import Profiles from "../pages/Profiles/Profiles.vue";
+import NewFeed from "../pages/NewFeed/NewFeed.vue";
 import Welcome from "@/pages/Welcome/Welcome.vue";
 import * as VueRouter from "vue-router";
 
@@ -6,7 +6,7 @@ import { ROUTER, NAME_ROUTER } from "./constant-router";
 
 const routes = [
   { path: ROUTER.welcome, name: NAME_ROUTER.welcome, component: Welcome },
-  { path: ROUTER.profile, name: NAME_ROUTER.profile, component: Profiles },
+  { path: ROUTER.newfeed, name: NAME_ROUTER.newfeed, component: NewFeed },
 ];
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
