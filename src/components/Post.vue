@@ -8,18 +8,19 @@ interface PostProps extends Post {
   dependency?: boolean;
 }
 const postProps = defineProps<PostProps>();
-const { type, content, listMedia ,imageAvatar,aliasUSer,timeUpdate} = postProps
+const { type, content, listMedia, imageAvatar, aliasUSer, timeUpdate } =
+  postProps;
 </script>
 <template>
   <div :class="dependency && 'card-main'">
-    <AvatarPost 
-    variant="full"
-    :kind-of-post="type"
-    :avatar-image="imageAvatar"
-    :alias-user="aliasUSer"
-    :time-update="timeUpdate"
+    <AvatarPost
+      variant="full"
+      :kind-of-post="type"
+      :avatar-image="imageAvatar"
+      :alias-user="aliasUSer"
+      :time-update="timeUpdate"
     />
-    <p class="mb-2" v-if="type=='picture'|| type=='video'">
+    <p class="mb-2" v-if="type == 'picture' || type == 'video'">
       {{ content }}
     </p>
     <div>
@@ -36,7 +37,7 @@ const { type, content, listMedia ,imageAvatar,aliasUSer,timeUpdate} = postProps
         :src="listMedia[0]"
       ></iframe>
     </div>
-    <PostAuth v-if="type=='auth'"/>
+    <PostAuth v-if="type == 'auth'" />
     <Divider />
   </div>
 </template>

@@ -9,7 +9,7 @@ const { alias, avatar, cost, follower, frequency } =
   <div>
     <img :src="avatar" alt="" srcset="" class="w-[108px] h-[108px] rounded-[8px] object-cover" />
   </div>
-  <p class="text-name-main">{{ alias }}</p>
+  <p class="text-name-main my-1">{{ alias }}</p>
   <IconTitle :title="`${cost} vnd`" which-children="1" />
   <IconTitle :title="`${follower.length} Follower`" which-children="2" />
   <IconTitle :title="`${frequency} news/week`" which-children="3" />

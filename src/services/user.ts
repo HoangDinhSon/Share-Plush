@@ -8,7 +8,7 @@ const firstUser: User = {
     { id: "123", name: "Hoang Lam" },
     { id: "123", name: "Hoang Lam" },
   ],
-  frequency: 5,
+  frequency: 500,
 };
 const listUser: ListUser = [
   firstUser,
