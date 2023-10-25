@@ -34,7 +34,8 @@ const responsiveOptions = ref([
     </div>
     <Carousel
       :value="listUser"
-      :numVisible="5"
+      :numVisible="4"
+      :numScroll="3"
       :responsiveOptions="responsiveOptions"
       :circular="true"
     >

@@ -6,7 +6,11 @@ export default {
     "./node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Be Vietnam Pro', 'Arial', 'sans'],
+      },
+    },
   },
   plugins: [],
 }

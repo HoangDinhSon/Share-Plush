@@ -8,14 +8,12 @@ interface IconTitleProps {
 }
 
 const { whichChildren, title } = defineProps<IconTitleProps>();
-console.log(whichChildren);
-
 </script>
 <template>
   <div class="flex items-center gap-2">
-    <div v-if="whichChildren=='1'"><DollarIcon/></div>
-    <div v-else-if="whichChildren=='2'"><UserIcon/> </div>
-    <div v-else="whichChildren=='3'"><VideoIcon/></div>
+    <div v-if="whichChildren == '1'"><DollarIcon /></div>
+    <div v-else-if="whichChildren == '2'"><UserIcon /></div>
+    <div v-else="whichChildren == '3'"><VideoIcon /></div>
     <p>{{ title }}</p>
   </div>
 </template>

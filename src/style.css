@@ -6,6 +6,7 @@
     --color-text-dark: #202b3c;
     --color-text-grey: #4f627d;
     --color-text-white: #ffffff;
+    --color-text-secondary: #485bc9;
     /* Background */
     --color-bg-main: #485bc9;
     --color-bg-secondary: #e2e8f0;
@@ -16,7 +17,7 @@
     /* follow neutral */
     --color-neutral-dark: #202b3c;
   }
-  * {
+  body {
     @apply text-sm text-[var(--color-text-main)];
   }
 }
@@ -24,6 +25,9 @@
 @layer components {
   .card-main {
     @apply px-4 py-3 bg-white;
+  }
+  .card-shadow-main {
+    @apply  shadow-2xl
   }
   .text-name-main {
     @apply text-[13px] font-semibold  leading-snug;
@@ -34,8 +38,11 @@
   .text-sub-header-main {
     @apply text-[11px] font-normal leading-normal;
   }
+  .text-auth {
+    @apply text-[var(--color-text-secondary)] text-[11px] font-medium;
+  }
   .bg-main {
-    @apply  bg-[var(--color-bg-secondary)]
+    @apply bg-[var(--color-bg-secondary)];
   }
 }
 @tailwind utilities;

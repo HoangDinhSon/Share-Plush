@@ -1,19 +1,35 @@
 <script setup lang="ts">
 import Avatar from "primevue/avatar";
+import { KindOfPost } from "@/types/common";
+interface AvatarPostProps {
+  variant?: "full" | "lack";
+  avatarImage?: string;
+  aliasUser?: string;
+  numberOfFollower?: string;
+  timeUpdate?: string;
+  kindOfPost?: KindOfPost;
+}
+const { avatarImage, aliasUser, numberOfFollower, kindOfPost } =
+  defineProps<AvatarPostProps>();
 </script>
 <template>
   <div class="flex items-center pl-[11px] mb-1">
     <Avatar
-      image="https://www.fcbarcelona.com/photo-resources/2020/04/30/43337a9f-3781-4886-948c-f70912e4b1af/1920x1080_Messi_primerGol-min.jpg?width=1200&height=750"
+      :image="avatarImage"
       class="mr-2 overflow-hidden w-[40px] h-[40px] object-contain"
       size="xlarge"
       shape="circle"
     />
     <div>
-      <p class="text-name-main">My name is son</p>
+      <p class="text-name-main">{{ aliasUser }}</p>
       <p class="text-sub-header-main">
-        Hello world
-        <span class="ml-1">Share image</span>
+        <span v-if="variant == 'lack'">{{ numberOfFollower }}</span>
+        <span v-if="variant == 'full'">
+          <span> {{ timeUpdate }} </span>
+          <span class="ml-1" v-if="kindOfPost == 'video'">Share video</span>
+          <span class="ml-1" v-if="kindOfPost == 'picture'">Share image</span>
+          <span class="ml-1" v-if="kindOfPost == 'auth'">Private</span>
+        </span>
       </p>
     </div>
   </div>

@@ -2,15 +2,24 @@
 import AvatarPost from "./AvatarPost.vue";
 import type { Post } from "@/types/common";
 import Divider from "primevue/divider";
+import PostAuth from "@/components/PostAuth.vue";
+
 interface PostProps extends Post {
   dependency?: boolean;
 }
-const { type, content, listMedia } = defineProps<PostProps>();
+const postProps = defineProps<PostProps>();
+const { type, content, listMedia ,imageAvatar,aliasUSer,timeUpdate} = postProps
 </script>
 <template>
   <div :class="dependency && 'card-main'">
-    <AvatarPost />
-    <p class="mb-2">
+    <AvatarPost 
+    variant="full"
+    :kind-of-post="type"
+    :avatar-image="imageAvatar"
+    :alias-user="aliasUSer"
+    :time-update="timeUpdate"
+    />
+    <p class="mb-2" v-if="type=='picture'|| type=='video'">
       {{ content }}
     </p>
     <div>
@@ -27,6 +36,7 @@ const { type, content, listMedia } = defineProps<PostProps>();
         :src="listMedia[0]"
       ></iframe>
     </div>
+    <PostAuth v-if="type=='auth'"/>
     <Divider />
   </div>
 </template>

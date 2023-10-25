@@ -8,25 +8,23 @@ const { scale } = props;
 </script>
 <template>
   <svg
-    :width="scale ? 22 * scale : 22"
-    :height="scale ? 23 * scale : 23"
-    viewBox="0 0 22 23"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    :width="scale ? 28 * scale : 28"
+    :height="scale ? 29 * scale : 29"
+    viewBox="0 0 28 29"
+    fill="none"
   >
-    <circle
-      cx="10.786"
-      cy="11.3181"
-      r="8.23951"
-      :stroke="color ? color : '#485BC9'"
-      stroke-width="1.5"
+    <path
+      d="M17.5 14.532L10.5 7.53198"
+      :stroke="color ? color : '#4F627D'"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
-      d="M16.5167 17.4767L19.7471 20.6987"
-      :stroke="color ? color : '#485BC9'"
-      stroke-width="1.5"
+      d="M17.5 14.532L10.5 21.532"
+      :stroke="color ? color : '#4F627D'"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />

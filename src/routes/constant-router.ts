@@ -1,14 +1,21 @@
 const ROUTER = {
   welcome: "/",
-  newfeed: "/newfeed",
-  profile: "/profile",
   login: "/login",
+  newfeed: "/newfeed",
+  search: "/search",
+  setting: "/setting",
+  profile: "/profile",
+  follow: "/follow"
 };
 const NAME_ROUTER = {
   welcome: "welcome",
-  profile: "profile",
   login: "login",
   newfeed: "newfeed",
+  search: "search",
+  setting: "setting",
+  profile: "profile",
+  follow: "follow",
 };
-
+type RouterKey = keyof typeof NAME_ROUTER;
 export { ROUTER, NAME_ROUTER };
+export type { RouterKey };

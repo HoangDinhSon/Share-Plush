@@ -1,28 +1,29 @@
 <script setup lang="ts">
-import SharePlusSmallLogoIcon from "../assets/icon/SharePlusSmallLogoIcon.vue";
-import SettingIcon from "../assets/icon/SettingIcon.vue";
-import SearchIcon from "../assets/icon/SearchIcon.vue";
-const classButton = "bg-[#E2E8F0] h-[22px] px-[2px]  border-none rounded-lg";
-
+import SubHeadingNewFeed from "@/pages/NewFeed/container/SubHeadingNewFeed.vue";
+import SubHeadingCommon from "@/components/SubHeadingCommon.vue";
+import type { RouteRecordName } from "vue-router";
+import { NAME_ROUTER } from "@/routes/constant-router";
+interface SubHeaderProps {
+  nameRouter: RouteRecordName | null | undefined;
+}
+const { newfeed } = NAME_ROUTER;
+const { nameRouter } = defineProps<SubHeaderProps>();
 </script>
 <template>
-  <div class="w-full flex justify-between card-main mb-2">
-    <SharePlusSmallLogoIcon />
-    <div class="flex gap-2">
-      <Button
-        :pt="{
-          root: { class: classButton },
-        }"
-      >
-        <SearchIcon :scale="0.8" />
-      </Button>
-      <Button
-        :pt="{
-          root: { class: classButton },
-        }"
-      >
-        <SettingIcon />
-      </Button>
-    </div>
+  <div class="card-main mb-2">
+    <SubHeadingNewFeed v-if="nameRouter == newfeed" />
+    <SubHeadingCommon v-else :name-router="nameRouter"  />
   </div>
 </template>
+
+<!-- 
+How To Usage 
+<script>
+import { useRouter } from "vue-router";
+const router =useRouter();
+const nameRouter = router.currentRoute.value.name
+</script>
+<template>
+    <SubHeader :name-router="nameRouter"/>
+</template>
+ -->
