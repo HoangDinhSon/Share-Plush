@@ -34,13 +34,26 @@ interface UserOfSearch {
 }
 type ListUserOfSearch = Array<UserOfSearch>;
 
+// Follower Setting
+interface FollowerSetting extends UserOfSearch {
+  plan: string;
+  timeLeave: number; // unit is day
+  notiStatus: boolean;
+}
+type ListFollowerSetting =Array<FollowerSetting>
+
 export type {
   User,
   Follower,
   ListUser,
+
   ListPost,
   Post,
   KindOfPost,
+
   ListUserOfSearch,
   UserOfSearch,
+
+  FollowerSetting,
+  ListFollowerSetting
 };
