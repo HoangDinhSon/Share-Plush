@@ -7,6 +7,7 @@ import InputText from "primevue/inputtext";
 import SearchIcon from "@/assets/icon/SearchIcon.vue";
 import { listResultSearch } from "@/services/listResultSearchUser";
 import RowForSearch from "./component/RowForSearch.vue";
+import NoData from "@/components/NoData.vue";
 const nameRouter = useNameRouter();
 const value = ref("");
 </script>
@@ -33,19 +34,21 @@ const value = ref("");
         Search result:
       </p>
       <!-- List -->
-      <div class="card-shadow-main">
-        <RowForSearch
-          v-for="item in listResultSearch"
-          :alias="item.alias"
-          :avatar-image="item.avatar"
-          :number-of-follower="item.numberOfFollower"
-        />
+      <div v-if="listResultSearch.length > 0">
+        <div class="card-shadow-main">
+          <RowForSearch
+            v-for="item in listResultSearch"
+            :alias="item.alias"
+            :avatar-image="item.avatar"
+            :number-of-follower="item.numberOfFollower"
+          />
+        </div>
+        <!-- End -->
+        <p class="text-center">End of result</p>
       </div>
-      <!-- End -->
-      <p class="text-center">End of result</p>
+      <NoData v-else/>
     </div>
   </div>
 </template>
-border-radius: 20px;
-background: var(--greyscale-200, #E2E8F0);
-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+border-radius: 20px; background: var(--greyscale-200, #E2E8F0); box-shadow: 0px
+0px 12px 0px rgba(0, 0, 0, 0.10);

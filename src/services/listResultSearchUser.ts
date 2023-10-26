@@ -19,4 +19,5 @@ const user3: UserOfSearch = {
   numberOfFollower: 50,
 };
 const listResultSearch: ListUserOfSearch = [user1, user2, user3];
+// const listResultSearch: ListUserOfSearch = [];
 export { listResultSearch };
