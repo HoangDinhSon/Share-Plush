@@ -1,5 +1,3 @@
-
-
 interface Follower {
   id: string;
   name: string;
@@ -29,6 +27,7 @@ type ListPost = Array<Post>;
 
 // Type of Result Search
 interface UserOfSearch {
+  id: string;
   alias: string;
   avatar: string;
   numberOfFollower: number;

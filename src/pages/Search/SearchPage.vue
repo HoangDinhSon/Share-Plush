@@ -5,8 +5,8 @@ import { useNameRouter } from "@/hooks/useNameRouter";
 import { ref } from "vue";
 import InputText from "primevue/inputtext";
 import SearchIcon from "@/assets/icon/SearchIcon.vue";
-import AvatarPost from "@/components/AvatarPost.vue";
-import ArrowRightIcon from "@/assets/icon/ArrowRightIcon.vue";
+import { listResultSearch } from "@/services/listResultSearchUser";
+import RowForSearch from "./component/RowForSearch.vue";
 const nameRouter = useNameRouter();
 const value = ref("");
 </script>
@@ -29,20 +29,23 @@ const value = ref("");
     </div>
 
     <div class="card-main">
-      <p class="text-base font-semibold">Search result:</p>
+      <p class="text-base font-semibold text-[var(--color-text-grey)] mb-6">
+        Search result:
+      </p>
       <!-- List -->
       <div class="card-shadow-main">
-        <div class="flex justify-between p-4">
-          <AvatarPost />
-          <ArrowRightIcon />
-        </div>
-        <div class="flex justify-between p-4">
-          <AvatarPost />
-          <ArrowRightIcon />
-        </div>
+        <RowForSearch
+          v-for="item in listResultSearch"
+          :alias="item.alias"
+          :avatar-image="item.avatar"
+          :number-of-follower="item.numberOfFollower"
+        />
       </div>
       <!-- End -->
-      <p>End of result</p>
+      <p class="text-center">End of result</p>
     </div>
   </div>
 </template>
+border-radius: 20px;
+background: var(--greyscale-200, #E2E8F0);
+box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);

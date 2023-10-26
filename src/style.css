@@ -27,7 +27,7 @@
     @apply px-4 py-3 bg-white;
   }
   .card-shadow-main {
-    @apply  shadow-2xl
+    @apply  shadow-main rounded-[20px]  mb-6 p-4 
   }
   .text-name-main {
     @apply text-[13px] font-semibold  leading-snug;
@@ -36,7 +36,7 @@
     @apply text-xs font-medium leading-normal;
   }
   .text-sub-header-main {
-    @apply text-[11px] font-normal leading-normal;
+    @apply text-[11px] font-normal leading-normal text-[var(--color-text-grey)];
   }
   .text-auth {
     @apply text-[var(--color-text-secondary)] text-[11px] font-medium;
