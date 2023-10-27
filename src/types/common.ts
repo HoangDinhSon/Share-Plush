@@ -42,6 +42,17 @@ interface FollowerSetting extends UserOfSearch {
 }
 type ListFollowerSetting =Array<FollowerSetting>
 
+interface UserProfile  {
+  id: string
+  coverPhoto : string //" anh biaìa " 
+  avatar :  string //"anh dai dien"
+  alias : string // link benên thu 3 
+  numberOfImage : number
+  numberOfVideo : number
+  description : string
+  listPost : ListPost // a array keep many Post
+  }
+
 export type {
   User,
   Follower,
@@ -55,5 +66,7 @@ export type {
   UserOfSearch,
 
   FollowerSetting,
-  ListFollowerSetting
+  ListFollowerSetting,
+
+  UserProfile
 };

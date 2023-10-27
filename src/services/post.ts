@@ -35,11 +35,8 @@ const postAuth: Post = {
   timeUpdate: "23/12/2012",
   content: " hello hello 123 hello hello 123 hello hello 123 ",
   type: "auth",
-  listMedia: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0i61Ye1dMd6kl7szkOxSdLgmgcVMChivQ_UK5FnLuvcFYFvHp8snzhicKhobmUbzDRRg&usqp=CAU",
-  ],
+  listMedia: [""],
 };
 const listPost: ListPost = [post1, post2, postAuth];
 // const listPost: ListPost = [];
 export default listPost;
-

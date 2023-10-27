@@ -30,7 +30,7 @@ const nameRouter = router.currentRoute.value.name
         :content="item.content"
         :type="item.type"
       />
-      <NoData v-else />
+      <NoData v-else content=" You still not follow any idols. Please follow to see their posts."/>
     </div>
   </div>
 </template>

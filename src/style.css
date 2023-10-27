@@ -16,6 +16,8 @@
     --color-border-main: #ffffff;
     /* follow neutral */
     --color-neutral-dark: #202b3c;
+    /* distance blank */
+    --blank-main : 8px ;
   }
   body {
     @apply text-sm text-[var(--color-text-main)];
@@ -27,7 +29,10 @@
     @apply px-4 py-3 bg-white;
   }
   .card-shadow-main {
-    @apply  shadow-main rounded-[20px]  mb-6 p-4 
+    @apply shadow-main rounded-[20px]  mb-6 p-4;
+  }
+  .text-header-secondary {
+    @apply text-base text-[var(--color-text-secondary)] font-semibold;
   }
   .text-name-main {
     @apply text-[13px] font-semibold  leading-snug;

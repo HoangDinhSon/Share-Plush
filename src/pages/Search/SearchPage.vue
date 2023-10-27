@@ -46,7 +46,7 @@ const value = ref("");
         <!-- End -->
         <p class="text-center">End of result</p>
       </div>
-      <NoData v-else/>
+      <NoData v-else content="Sorry! We can find any matching content. Please try different keywords."/>
     </div>
   </div>
 </template>
