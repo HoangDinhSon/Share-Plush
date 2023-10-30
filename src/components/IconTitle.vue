@@ -5,10 +5,9 @@ import VideoIcon from "@/assets/icon/VideoIcon.vue";
 interface IconTitleProps {
   whichChildren: string;
   title: string;
-  discount?: string;
 }
 
-const { whichChildren, title, discount } = defineProps<IconTitleProps>();
+const { whichChildren, title } = defineProps<IconTitleProps>();
 </script>
 <template>
   <div class="flex items-center gap-1">
@@ -16,19 +15,10 @@ const { whichChildren, title, discount } = defineProps<IconTitleProps>();
     <div v-else-if="whichChildren == '2'"><UserIcon /></div>
     <div v-else="whichChildren == '3'"><VideoIcon /></div>
     <p
-      v-if="!!discount || discount == ''"
-      class="text-ellipsis whitespace-nowrap overflow-hidden text-[14px] leading-4"
-    >
-      {{ title }}
-      <span class="text-[red] ml-3" v-if="!!discount || discount == ''">{{
-        discount
-      }}</span>
-    </p>
-    <p
-      v-else
       class="text-ellipsis whitespace-nowrap overflow-hidden text-[11px] leading-4"
     >
       {{ title }}
     </p>
   </div>
 </template>
+whitespace-pre

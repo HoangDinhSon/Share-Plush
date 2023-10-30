@@ -28,6 +28,9 @@
   .card-main {
     @apply px-4 py-3 bg-white;
   }
+  .card-secondary {
+    @apply bg-[var(--color-bg-secondary)] rounded-[20px] overflow-hidden
+  }
   .card-shadow-main {
     @apply shadow-main rounded-[20px]  mb-6 p-4;
   }

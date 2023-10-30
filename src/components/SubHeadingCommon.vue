@@ -2,11 +2,13 @@
 import ButtonIconSmall from "./ButtonIconSmall.vue";
 import type { RouteRecordName } from "vue-router";
 import { CONTENT_SUB_HEADER } from "@/types/constant";
+import { NAME_ROUTER } from "@/routes/constant-router";
 
 interface SubHeadingCommonProps {
   nameRouter: RouteRecordName | null | undefined;
 }
 const { nameRouter } = defineProps<SubHeadingCommonProps>();
+const {followPlan}= NAME_ROUTER
 let contentLeft = " ";
 switch (nameRouter) {
   case "search":
@@ -17,6 +19,9 @@ switch (nameRouter) {
     break;
   case "profile":
     contentLeft = CONTENT_SUB_HEADER.userProfile;
+    break;
+  case followPlan:
+    contentLeft = CONTENT_SUB_HEADER.followPlant;
     break;
   default:
     contentLeft = ":((-check-switch";

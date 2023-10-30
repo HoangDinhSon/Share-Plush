@@ -5,7 +5,7 @@ const ROUTER = {
   search: "/search",
   setting: "/setting",
   profile: "/profile",
-  follow: "/follow"
+  followPlan: "/follow-plan"
 };
 const NAME_ROUTER = {
   welcome: "welcome",
@@ -14,7 +14,7 @@ const NAME_ROUTER = {
   search: "search",
   setting: "setting",
   profile: "profile",
-  follow: "follow",
+  followPlan: "followPlan",
 };
 type RouterKey = keyof typeof NAME_ROUTER;
 export { ROUTER, NAME_ROUTER };
