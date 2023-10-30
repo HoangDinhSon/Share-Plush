@@ -24,5 +24,10 @@ app.component("Divider ", Divider);
 app.component("InputText ", InputText);
 app.component("Dialog ", Dialog);
 
-app.use(PrimeVue, { unstyled: true, pt: Tailwind });
+app.use(PrimeVue, {
+  ripple: true,
+  unstyled: true,
+  pt: Tailwind,
+ 
+});
 app.mount("#app");

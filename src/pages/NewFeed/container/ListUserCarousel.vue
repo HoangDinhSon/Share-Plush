@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import UserCarousel from "./UserCarousel.vue";
 import listUser from "@/services/user";
+import Carousel from "primevue/carousel";
 </script>
 <template>
   <div class="card-main mb-2">
@@ -16,16 +17,15 @@ import listUser from "@/services/user";
     </div>
     <Carousel
       :value="listUser"
-      :numVisible="3"
-      :numScroll="1"
       :showNavigators="false"
       :showIndicators="false"
-      :circular="true"
-      :unstyled="true"
+      :numVisible="3"
+      :numScroll="2"
       :pt="{
         root: {
           class: 'rounded-[8px] overflow-hidden',
         },
+        itemsContainer: { class: 'w-[342px] flex' },
       }"
     >
       <template #item="slotProps">
