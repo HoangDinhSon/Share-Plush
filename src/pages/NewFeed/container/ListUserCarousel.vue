@@ -6,12 +6,13 @@ import Carousel from "primevue/carousel";
 <template>
   <div class="card-main mb-2">
     <div class="flex justify-between mb-3 text-header-main">
-      <p>Explore SHAREPLUS Idols:</p>
+      <p class="text-xs font-medium">Explore SHAREPLUS Idols:</p>
       <Button
         label="View all"
         link
         :pt="{
-          root: { class: 'p-0 text-[var(--color-text-secondary)]' },
+          label: { class: 'text-[var(--color-text-secondary)] font-medium' },
+          root: { class: 'p-0 ' },
         }"
       />
     </div>

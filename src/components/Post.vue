@@ -20,20 +20,20 @@ const { type, content, listMedia, imageAvatar, aliasUSer, timeUpdate } =
       :alias-user="aliasUSer"
       :time-update="timeUpdate"
     />
-    <p class="mb-2" v-if="type == 'picture' || type == 'video'">
+    <p class="my-2 text-post" v-if="type == 'picture' || type == 'video'">
       {{ content }}
     </p>
     <div>
       <img
         v-if="type == 'picture'"
-        class="w-full"
+        class="w-full h-[calc((100vw-32px)*0.56)]"
         :src="listMedia[0]"
         alt=""
         srcset=""
       />
       <iframe
         v-if="type == 'video'"
-        class="w-full"
+        class="w-full h-[calc((100vw-32px)*0.56)]"
         :src="listMedia[0]"
       ></iframe>
     </div>

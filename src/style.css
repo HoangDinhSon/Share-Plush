@@ -49,6 +49,9 @@
   .text-auth {
     @apply text-[var(--color-text-secondary)] text-[11px] font-medium;
   }
+  .text-post {
+    @apply text-[11px] text-[--color-text-main]
+  }
   .bg-main {
     @apply bg-[var(--color-bg-secondary)];
   }

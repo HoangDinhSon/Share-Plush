@@ -10,7 +10,7 @@ const { newfeed } = NAME_ROUTER;
 const { nameRouter } = defineProps<SubHeaderProps>();
 </script>
 <template>
-  <div class="card-main mb-2">
+  <div class="card-main mb-[9px]">
     <SubHeadingNewFeed v-if="nameRouter == newfeed" />
     <SubHeadingCommon v-else :name-router="nameRouter"  />
   </div>
