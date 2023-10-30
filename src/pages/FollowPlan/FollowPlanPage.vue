@@ -25,6 +25,7 @@ const nameRouter = useNameRouter();
           :price="item.price"
           :kindOfPlanIcon="item.kindOfPlanIcon"
           :discount="item.discount"
+          chosen-plan="sixMonth"
         />
       </div>
       <div class="flex justify-center">

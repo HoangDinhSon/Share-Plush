@@ -12,11 +12,14 @@ interface PricePlantProps {
   price: string;
   discount: string;
   kindOfPlanIcon: KindOfPlan;
+  chosenPlan?: string;
 }
-const { plan, price, kindOfPlanIcon } = defineProps<PricePlantProps>();
+const { plan, price, kindOfPlanIcon, chosenPlan } =
+  defineProps<PricePlantProps>();
+const isActive = chosenPlan == kindOfPlanIcon;
 </script>
 <template>
-  <div class="flex items-center gap-3 p-4">
+  <div class="flex items-center gap-3 p-4" :class="{ active: isActive }">
     <PlanOneMonthIcon v-if="kindOfPlanIcon == 'oneMonth'" />
     <PlanThreeMonthIcon v-if="kindOfPlanIcon == 'threeMonth'" />
     <PlanSixMonthIcon v-if="kindOfPlanIcon == 'sixMonth'" />
@@ -24,11 +27,20 @@ const { plan, price, kindOfPlanIcon } = defineProps<PricePlantProps>();
     <div>
       <p
         class="text-base font-semibold text-[var(--color-text-secondary)] mb-2"
+        :class="{'text-white' : isActive}"
       >
         {{ plan }}
       </p>
-      <IconTitle which-children="1" :title="price" :discount="discount" />
+      <IconTitle which-children="1" :title="price" :discount="discount" :is-active="isActive"/>
     </div>
   </div>
   <DivideSecond />
 </template>
+<style>
+.active {
+  background-color: var(--color-bg-main);
+}
+.text-white {
+  color: white;
+}
+</style>
