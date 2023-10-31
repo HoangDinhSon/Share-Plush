@@ -1,16 +1,23 @@
 <script setup lang="ts">
 interface ButtonMainProps {
   content: string;
+  variant?: "primary" | "secondary";
 }
-const { content } = defineProps<ButtonMainProps>();
+const { content, variant } = withDefaults(defineProps<ButtonMainProps>(), {
+  variant: "primary",
+});
 </script>
-<template>
+<template> 
   <Button
     :label="content"
     :pt="{
-      root: {
-        class: 'my_gradient_button py-[8px] px-[32px]  rounded-lg',
-      },
+      root: [
+        'my_gradient_button py-[8px] rounded-lg',
+        {
+          'px-[32px]': variant == 'primary',
+          'px-[16px]': variant == 'secondary',
+        },
+      ],
       label: { class: 'text-white' },
     }"
   />

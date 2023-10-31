@@ -23,14 +23,14 @@ const { coverPhoto,alias, numberOfVideo,numberOfImage ,description,avatar} = def
     </div>
     <div class="text-center">
       <p class="text-header-secondary blankMiddle">{{ alias }}</p>
-      <p class="text-[var(--color-text-grey)] blankMiddle">
+      <p class="text-[var(--color-text-grey)] ">
         {{ `${numberOfImage} Images . ${numberOfVideo} Videos` }}
       </p>
       <p class="text-sub-header-main blankMiddle">
         {{ description }}
       </p>
       <div class="blankMiddle">
-        <ButtonMain content="Follow" />
+        <ButtonMain content="Follow" variant="secondary" />
       </div>
     </div>
   </div>
