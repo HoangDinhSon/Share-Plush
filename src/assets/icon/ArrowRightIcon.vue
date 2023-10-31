@@ -10,7 +10,7 @@ const { scale } = props;
   <svg
     xmlns="http://www.w3.org/2000/svg"
     :width="scale ? 28 * scale : 28"
-    :height="scale ? 29 * scale : 29"
+    :height="scale ? 28 * scale : 28"
     viewBox="0 0 28 29"
     fill="none"
   >

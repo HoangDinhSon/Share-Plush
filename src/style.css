@@ -18,6 +18,7 @@
     --color-neutral-dark: #202b3c;
     /* distance blank */
     --blank-main : 8px ;
+    --blank-primary :9px
   }
   body {
     @apply text-sm text-[var(--color-text-main)];
@@ -32,7 +33,7 @@
     @apply bg-[var(--color-bg-secondary)] rounded-[20px] overflow-hidden
   }
   .card-shadow-main {
-    @apply shadow-main rounded-[20px]  mb-6 p-4;
+    @apply shadow-main rounded-[20px]  mb-6 ;
   }
   .text-header-secondary {
     @apply text-base text-[var(--color-text-secondary)] font-semibold;

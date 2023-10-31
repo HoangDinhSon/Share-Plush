@@ -10,7 +10,7 @@ interface RowForSearch {
 const { avatarImage, alias, numberOfFollower } = defineProps<RowForSearch>();
 </script>
 <template>
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center p-4">
     <AvatarPost
       :variant="'lack'"
       :avatar-image="avatarImage"

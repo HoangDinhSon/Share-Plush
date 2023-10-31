@@ -16,15 +16,15 @@ const value = ref("");
     <HeadingPage />
     <SubHeader :name-router="nameRouter" />
 
-    <div class="card-main">
+    <div class="card-main mb-[--blank-primary]">
       <div class="relative">
-        <span class="absolute top-[11px] left-4">
+        <span class="absolute top-[9px] left-4">
           <SearchIcon :scale="0.8" />
         </span>
         <InputText
           v-model="value"
-          placeholder="Search"
-          class="pl-[40px] py-[8.5px] w-full"
+          placeholder="Search name or anything"
+          class="pl-[40px] py-[8.5px] w-full text-xs text-[--color-text-main]"
         />
       </div>
     </div>
@@ -44,11 +44,9 @@ const value = ref("");
           />
         </div>
         <!-- End -->
-        <p class="text-center">End of result</p>
+        <p class="text-center text-[--text-color-grey]">End of result</p>
       </div>
       <NoData v-else content="Sorry! We can find any matching content. Please try different keywords."/>
     </div>
   </div>
 </template>
-border-radius: 20px; background: var(--greyscale-200, #E2E8F0); box-shadow: 0px
-0px 12px 0px rgba(0, 0, 0, 0.10);

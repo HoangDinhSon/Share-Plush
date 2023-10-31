@@ -8,7 +8,7 @@ interface SubHeadingCommonProps {
   nameRouter: RouteRecordName | null | undefined;
 }
 const { nameRouter } = defineProps<SubHeadingCommonProps>();
-const {followPlan}= NAME_ROUTER
+const { followPlan } = NAME_ROUTER;
 let contentLeft = " ";
 switch (nameRouter) {
   case "search":
@@ -28,7 +28,7 @@ switch (nameRouter) {
 }
 </script>
 <template>
-  <div class="flex justify-between gap-2">
+  <div class="flex justify-between gap-2 font-medium text-[--color-text-grey]">
     <p>{{ contentLeft }}</p>
     <ButtonIconSmall :name-icon="'arrowLeft'" />
   </div>

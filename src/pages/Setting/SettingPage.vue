@@ -11,12 +11,16 @@ const nameRouter = useNameRouter();
   <div class="bg-main">
     <HeadingPage />
     <SubHeader :name-router="nameRouter" />
-    <div class="card-main mb-2 text-base font-semibold text-[var(--color-text-grey)] ">Your Follow list of idols:</div>
+    <div
+      class="card-main mb-2 text-base font-semibold text-[var(--color-text-grey)]"
+    >
+      Your Follow list of idols:
+    </div>
     <div class="card-main">
       <div class="card-shadow-main relative mt-8">
-        <p class="absolute top-[-30px] left-4">Idol Name</p>
-        <p class="absolute top-[-30px] left-[calc(100%/3*1.7)]">Plan</p>
-        <p class="absolute top-[-30px] right-4">Noti</p>
+        <p class="header-list left-4">Idol Name</p>
+        <p class="header-list left-[calc(100%/3*1.7)]">Plan</p>
+        <p class="header-list right-4">Noti</p>
         <SettingEachUser
           v-for="item in listFollowerSetting"
           :id="item.id"
@@ -35,3 +39,11 @@ const nameRouter = useNameRouter();
     </div>
   </div>
 </template>
+<style>
+.header-list {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  color: var(--color-text-grey);
+}
+</style>
