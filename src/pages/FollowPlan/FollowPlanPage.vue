@@ -18,7 +18,7 @@ const nameRouter = useNameRouter();
       >
         Choose plan to follow your idol
       </p>
-      <div class="card-secondary mb-3">
+      <div class="card-secondary mb-6">
         <PricePlan
           v-for="item in LIST_PLAN_UI"
           :plan="item.plan"

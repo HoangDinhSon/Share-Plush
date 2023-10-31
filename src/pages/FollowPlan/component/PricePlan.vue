@@ -4,7 +4,7 @@ import PlanOneMonthIcon from "@/assets/icon/PlanOneMonthIcon.vue";
 import PlanThreeMonthIcon from "@/assets/icon/PlanThreeMonthIcon.vue";
 import PlanSixMonthIcon from "@/assets/icon/PlanSixMonthIcon.vue";
 import PlanOneYearIcon from "@/assets/icon/PlanOneYearIcon.vue";
-import DivideSecond from "@/components/DivideSecond.vue";
+import DividerCommon from "@/components/DividerCommon.vue";
 import type { KindOfPlan } from "@/types/page-follow-plan";
 
 interface PricePlantProps {
@@ -19,7 +19,7 @@ const { plan, price, kindOfPlanIcon, chosenPlan } =
 const isActive = chosenPlan == kindOfPlanIcon;
 </script>
 <template>
-  <div class="flex items-center gap-3 p-4" :class="{ active: isActive }">
+  <div class="flex items-center gap-3 p-3" :class="{ active: isActive }">
     <PlanOneMonthIcon v-if="kindOfPlanIcon == 'oneMonth'" />
     <PlanThreeMonthIcon v-if="kindOfPlanIcon == 'threeMonth'" />
     <PlanSixMonthIcon v-if="kindOfPlanIcon == 'sixMonth'" />
@@ -27,20 +27,23 @@ const isActive = chosenPlan == kindOfPlanIcon;
     <div>
       <p
         class="text-base font-semibold text-[var(--color-text-secondary)] mb-2"
-        :class="{'text-white' : isActive}"
+        :class="{ 'text-[var(--color-text-light)]': isActive }"
       >
         {{ plan }}
       </p>
-      <IconTitle which-children="1" :title="price" :discount="discount" :is-active="isActive"/>
+      <IconTitle
+        which-children="1"
+        :title="price"
+        :discount="discount"
+        :is-active="isActive"
+        variant="discount"
+      />
     </div>
   </div>
-  <DivideSecond />
+  <DividerCommon variant="primary" />
 </template>
-<style>
+<style scoped>
 .active {
   background-color: var(--color-bg-main);
-}
-.text-white {
-  color: white;
 }
 </style>

@@ -6,19 +6,21 @@
     --color-text-dark: #202b3c;
     --color-text-grey: #4f627d;
     --color-text-white: #ffffff;
+    --color-text-light: #fefcff;
     --color-text-secondary: #485bc9;
+    --color-text-discount: #fd153f;
     /* Background */
     --color-bg-main: #485bc9;
     --color-bg-secondary: #e2e8f0;
+    --color-bg-third: #f1f5f9;
     /* Border */
     --color-border-main: #ffffff;
     --color-border-secondary: #ffffff;
-    --color-border-main: #ffffff;
     /* follow neutral */
     --color-neutral-dark: #202b3c;
     /* distance blank */
-    --blank-main : 8px ;
-    --blank-primary :9px
+    --blank-main: 8px;
+    --blank-primary: 9px;
   }
   body {
     @apply text-sm text-[var(--color-text-main)];
@@ -30,10 +32,10 @@
     @apply px-4 py-3 bg-white;
   }
   .card-secondary {
-    @apply bg-[var(--color-bg-secondary)] rounded-[20px] overflow-hidden
+    @apply bg-[var(--color-bg-third)] rounded-[20px] overflow-hidden;
   }
   .card-shadow-main {
-    @apply shadow-main rounded-[20px]  mb-6 ;
+    @apply shadow-main rounded-[20px]  mb-6;
   }
   .text-header-secondary {
     @apply text-base text-[var(--color-text-secondary)] font-semibold;
@@ -50,8 +52,11 @@
   .text-auth {
     @apply text-[var(--color-text-secondary)] text-[11px] font-medium;
   }
+  .text-discount {
+    @apply text-[--color-text-discount];
+  }
   .text-post {
-    @apply text-[11px] text-[--color-text-main]
+    @apply text-[11px] text-[--color-text-main];
   }
   .bg-main {
     @apply bg-[var(--color-bg-secondary)];

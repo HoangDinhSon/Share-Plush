@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import AvatarPost from "./AvatarPost.vue";
 import type { Post } from "@/types/common";
-import Divider from "primevue/divider";
 import PostAuth from "@/components/PostAuth.vue";
+import DividerCommon from "@/components/DividerCommon.vue";
 
 interface PostProps extends Post {
   dependency?: boolean;
@@ -12,7 +12,6 @@ const { type, content, listMedia, imageAvatar, aliasUSer, timeUpdate } =
   postProps;
 </script>
 <template>
-  <div :class="dependency && 'card-main'">
     <AvatarPost
       variant="full"
       :kind-of-post="type"
@@ -38,6 +37,5 @@ const { type, content, listMedia, imageAvatar, aliasUSer, timeUpdate } =
       ></iframe>
     </div>
     <PostAuth v-if="type == 'auth'" />
-    <Divider />
-  </div>
+    <DividerCommon  />
 </template>

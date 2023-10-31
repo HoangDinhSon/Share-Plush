@@ -2,7 +2,7 @@
 import AvatarPost from "@/components/AvatarPost.vue";
 import PlanSetting from "@/pages/Setting/component/PlanSetting.vue";
 import BellButton from "./BellButton.vue";
-import DivideMain from "@/components/DivideMain.vue";
+import DividerCommon from "@/components/DividerCommon.vue";
 import { ref } from "vue";
 interface SettingEachUserProps {
   id: string;
@@ -30,5 +30,5 @@ const toggleBell = () => {
     <PlanSetting :plan="props.plan" :time="props.timeLeave" />
     <BellButton :status="statusBell" @click="toggleBell" />
   </div>
-  <DivideMain />
+  <DividerCommon variant="primary" />
 </template>

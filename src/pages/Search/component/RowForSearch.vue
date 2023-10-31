@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ArrowRightIcon from "@/assets/icon/ArrowRightIcon.vue";
 import AvatarPost from "@/components/AvatarPost.vue";
-import DivideMain from "@/components/DivideMain.vue";
+import DividerCommon from "@/components/DividerCommon.vue";
 interface RowForSearch {
   avatarImage: string;
   alias: string;
@@ -19,5 +19,5 @@ const { avatarImage, alias, numberOfFollower } = defineProps<RowForSearch>();
     />
     <ArrowRightIcon />
   </div>
-  <DivideMain/>
+  <DividerCommon variant="primary"/>
 </template>
